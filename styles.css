@@ -1,3 +1,24 @@
+/* Define Variables */
+:root {
+    --header-bg-color: #be0000;
+    --border-color: black;
+    --font-family-primary: 'Franklin Gothic Medium', 'Helvetica', 'Arial Narrow', Arial, sans-serif;
+    --font-family-secondary: 'PhilosopherFont', Arial, sans-serif;
+    --font-size-h1: 5rem;
+    --font-size-info: 1.5rem;
+    --font-size-small: 1rem;
+    --font-size-smaller: 0.75rem;
+    --border-radius: 10px;
+    --gap: 20px;
+    --box-bg-color: #fffafa;
+    --text-color: black;
+    --link-color: #be0000;
+    --link-hover-color: #0066cc;
+    --transition-time: 0.3s;
+    --shadow-color: #ffeeee;
+}
+
+/* Font Face */
 @font-face {
     font-family: 'PhilosopherFont';
     src: url('fonts/Philosopher-BoldItalic.ttf') format('truetype');
@@ -5,16 +26,18 @@
     font-style: normal;
 }
 
+/* General Styles */
 body {
-    font-family:'Franklin Gothic Medium', 'Helvetica', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--font-family-primary);
     margin: 0;
     padding: 0;
 }
 
+/* Header Styles */
 header {
     position: relative;
-    border: 2px solid black; /* Thin black outline */
-    background-color: #be0000;
+    border: 2px solid var(--border-color);
+    background-color: var(--header-bg-color);
     color: white;
     height: 125px;
 }
@@ -28,11 +51,11 @@ header {
 }
 
 .header-image {
-    height: 100px; /* Adjust as needed */
+    height: 100px;
     width: auto;
     position: absolute;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for exact vertical centering */
+    top: 50%;
+    transform: translateY(-50%);
     left: 12.5%;
     right: 25%;
 }
@@ -46,36 +69,36 @@ header {
 }
 
 .header-text h1 {
-    font-size: 5rem;
-    font-family: 'PhilosopherFont', Arial, sans-serif;
+    font-size: var(--font-size-h1);
+    font-family: var(--font-family-secondary);
 }
 
 .header-info {
     margin: 0;
-    font-size: 1.5rem; /* Smaller font size than h1 */
+    font-size: var(--font-size-info);
     margin-top: 5px;
 }
 
 /* CV Icon Styles */
 .cv-icon {
     position: absolute;
-    top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
+    top: 10px;
+    right: 10px;
     margin-left: 30px;
 }
 
 .cv-icon-image {
-    height: 100px; /* Adjust size as needed */
+    height: 100px;
     width: auto;
-    opacity: 0.5; /* Adjust transparency level (0.0 to 1.0) */
-    transition: opacity 0.3s; /* Smooth transition for hover effect */
+    opacity: 0.5;
+    transition: opacity var(--transition-time);
 }
 
 .cv-icon-image:hover {
-    opacity: 1.0; /* Full opacity on hover */
+    opacity: 1.0;
 }
 
-
+/* Container and Sidebar Styles */
 .container {
     display: flex;
     flex-direction: row;
@@ -83,16 +106,16 @@ header {
 }
 
 .sidebar {
-    background-color: #f9f9f9;
+    background-color: var(--box-bg-color);
     width: 33.33%;
     padding: 10px;
     box-sizing: border-box;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    border-radius: 10px; /* Rounded corners */
-    border: 1px solid black; /* Optional border for better visibility */
+    align-items: center;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
     margin: 20px;
     overflow-x: auto;
 }
@@ -100,7 +123,8 @@ header {
 .profile-image {
     height: auto;
     width: 90%;
-    border-radius: 10px; /* Rounded corners for the image */
+    border-radius: var(--border-radius);
+    box-shadow: 4.5px 4.5px 9px 2.25px var(--shadow-color);
 }
 
 .main-content {
@@ -114,22 +138,23 @@ header {
     width: 66.6%;
 }
 
+/* Info Boxes Styles */
 .info-boxes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust based on your design */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--gap);
     width: 100%;
-    max-width: 1000px; /* Adjust to your desired max width */
+    max-width: 1000px;
 }
 
 .info-box, .about-box {
-    background-color: #f9f9f9;
-    border: 1px solid black;
-    border-radius: 10px;
+    background-color: var(--box-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
     padding: 20px;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     overflow: hidden;
     cursor: default;
 }
@@ -149,17 +174,17 @@ header {
 .info-box p, .about-box p {
     margin: 0;
     text-align: left;
-    font-size: 1.05rem;
+    font-size: var(--font-size-small);
 }
 
 .citation {
-    text-indent: -1.5em; 
-    padding-left: 1.5em; /* Same value as text-indent to create the hanging indent effect */
+    text-indent: -1.5em;
+    padding-left: 1.5em;
     margin-bottom: 10px;
 }
 
 a {
-    color: #be0000;
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -168,14 +193,14 @@ a:hover {
 }
 
 table {
-    width: 100%; /* Ensure the table takes the full width of its container */
+    width: 100%;
     border-collapse: collapse;
 }
 
 th {
     text-align: left;
     padding: 8px;
-    background-color: #e2e6e6;
+    background-color: var(--box-bg-color);
     font-weight: bold;
 }
 
@@ -185,7 +210,7 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: var(--shadow-color);
 }
 
 .sidebar table {
@@ -195,7 +220,7 @@ tr:nth-child(even) {
 
 .sidebar th, .sidebar td {
     padding: 8px;
-    font-size: 0.9rem; /* Adjust font size for better fit on smaller screens */
+    font-size: 0.9rem;
 }
 
 .sidebar th {
@@ -208,25 +233,102 @@ tr:nth-child(even) {
 }
 
 .section-divider th, .section-divider td {
-    border-top: 1px solid #000;
+    border-top: 1px solid var(--border-color);
     padding-top: 8px;
 }
 
-.logos-csu-horizontal {
-    width: 80%;
-    height: auto;
-    margin: 0;
+/* Logo Styles */
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 92px;
+    margin-bottom: 10px;
+    padding-right: 10px;
 }
 
-.logos-unc {
-    width: 70%;
-    height: auto;
-    margin: 0;
+.logo-shrink {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 75px;
+    margin-bottom: 10px;
+    padding-right: 10px;
 }
 
+/* Entry Styles */
+.entry {
+    margin-bottom: 20px;
+}
+
+.entry-details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.institution {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.degree {
+    font-size: 1rem !important;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #888;
+    text-align: right;
+    flex: 1;
+}
+
+.description {
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+/* Teaching Section Styles */
+.teaching-section {
+    margin-top: 5px;
+}
+
+.course-code {
+    font-size: 1.1rem !important;
+    margin: 0;
+    text-decoration: underline;
+}
+
+.sems {
+    font-size: 0.9rem !important;
+    color: var(--link-color);
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+}
+
+.sems:hover {
+    text-decoration: underline;
+}
+
+/* Photo Gallery Styles */
 .photo-gallery {
     display: flex;
-    overflow-x: scroll; /* Allows horizontal scrolling */
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     gap: 0;
 }
@@ -242,101 +344,19 @@ tr:nth-child(even) {
 }
 
 figure {
-    margin: 0; /* Removes margin around the figure element */
-    padding: 5px; /* Removes padding around the figure element */
+    margin: 0;
+    padding: 5px;
 }
 
 figcaption {
-    margin: 0; /* Removes margin around the caption */
-    padding: 0; /* Removes padding around the caption */
-    text-align: center; /* Centers caption text */
-    font-size: 0.75rem; /* Adjust font size as needed */
-}
-
-.education-section {
-    margin-top: 10px;
-}
-
-.entry {
-    margin-bottom: 20px;
-}
-
-.logo {
-    display: block;
-    margin: 0 auto; /* Center the logo */
-    width: auto;
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-.entry-details {
-    display: flex;
-    flex-direction: column;
-    text-align: center; /* Center text within the container */
-    width: 100%; /* Ensure full width for proper alignment */
-}
-
-.institution {
-    font-size: 1.5rem;
-    font-weight: bold;
     margin: 0;
-    text-decoration: underline;
+    padding: 0;
     text-align: center;
+    font-size: var(--font-size-smaller);
 }
 
-.degree {
-    font-size: 1rem !important;
-    margin: 0;
-    display: flex;
-    justify-content: space-between; /* Space out items */
-    align-items: center; /* Align items vertically */
-}
-
-.date {
-    font-size: 0.8rem; /* Smaller font size for dates */
-    color: #888; /* Light color for dates */
-    text-align: right; /* Right-align the date */
-    flex: 1; /* Allow date to take available space */
-}
-
-.description {
-    margin: 10px 0;
-    font-size: 0.9rem;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 10px 0;
-}
-
-.teaching-section {
-    margin-top: 5px;
-}
-
-.course-code {
-    font-size: 1.1rem !important;
-    margin: 0;
-    text-decoration: underline;
-}
-
-.sems {
-    font-size: 0.9rem !important; /* Smaller font size for dates */
-    color: #888; /* Light color for dates */
-    color: #0066cc; /* Link color */
-    text-decoration: none; /* Remove underline */
-    text-align: center; /* Right-align the date */
-    flex: 1; /* Allow date to take available space */
-}
-
-
-.sems:hover {
-    text-decoration: underline; /* Add underline on hover for better user experience */
-}
-
-
+/* Responsive Styles */
 @media (max-width: 812px) {
-    /* Adjust layout for smaller screens */
     .header-box {
         flex-direction: column;
         align-items: center;
@@ -344,8 +364,8 @@ hr {
 
     .header-image {
         position: absolute;
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Adjust for exact vertical centering */
+        top: 50%;
+        transform: translateY(-50%);
         left: 2.5%;
         height: 75%;
         width: auto;
@@ -358,28 +378,28 @@ hr {
         left: 22%;
         right: 20%;
     }
-    
+
     .header-text h1 {
         font-size: 2.75rem;
     }
 
     .cv-icon {
         position: absolute;
-        top: 10%; /* Adjust as needed */
-        right: 2.5%; /* Adjust as needed */
+        top: 10%;
+        right: 2.5%;
         margin-left: 0px;
     }
-    
+
     .cv-icon-image {
-        height: 90px; /* Adjust size as needed */
+        height: 90px;
         width: auto;
-        opacity: 0.5; /* Adjust transparency level (0.0 to 1.0) */
-        transition: opacity 0.3s; /* Smooth transition for hover effect */
+        opacity: 0.5;
+        transition: opacity var(--transition-time);
     }
 
     .main-content {
-        width: 100%; /* Take full width on small screens */
-        padding: 5px; /* Add padding */
+        width: 100%;
+        padding: 5px;
     }
 
     .container {
@@ -391,10 +411,10 @@ hr {
 
     .sidebar {
         width: 100%;
-        margin: 0; /* Remove margins for full width */
+        margin: 0;
     }
 
     .info-boxes {
-        grid-template-columns: 1fr; /* Stack boxes in a single column */
+        grid-template-columns: 1fr;
     }
 }
