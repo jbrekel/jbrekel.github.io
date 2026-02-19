@@ -1,6 +1,6 @@
 /* Define Variables */
 :root {
-    --header-bg-color: #be0000;
+    --header-bg-color: #a35a65;
     --border-color: black;
     --font-family-primary: 'Franklin Gothic Medium', 'Helvetica', 'Arial Narrow', Arial, sans-serif;
     --font-family-secondary: 'PhilosopherFont', Arial, sans-serif;
@@ -12,10 +12,10 @@
     --gap: 20px;
     --box-bg-color: #fffafa;
     --text-color: black;
-    --link-color: #be0000;
+    --link-color: #b00c25;
     --link-hover-color: #0066cc;
     --transition-time: 0.3s;
-    --shadow-color: #ffeeee;
+    --shadow-color: #e7f0f9;
 }
 
 /* Font Face */
@@ -298,7 +298,7 @@ tr:nth-child(even) {
 
 hr {
     border: none;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #f9cdd3;
     margin: 10px 0;
 }
 
