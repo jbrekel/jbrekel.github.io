@@ -1,7 +1,7 @@
 /* Define Variables */
 :root {
-    --header-bg-color: #a35a65;
-    --border-color: black;
+    --header-bg-color: #6f263d;
+    --border-color:#065c9e;
     --font-family-primary: 'Franklin Gothic Medium', 'Helvetica', 'Arial Narrow', Arial, sans-serif;
     --font-family-secondary: 'PhilosopherFont', Arial, sans-serif;
     --font-size-h1: 5rem;
@@ -12,10 +12,10 @@
     --gap: 20px;
     --box-bg-color: #fffafa;
     --text-color: black;
-    --link-color: #b00c25;
-    --link-hover-color: #0066cc;
+    --link-color: #065c9e;
+    --link-hover-color: #6f263d;
     --transition-time: 0.3s;
-    --shadow-color: #e7f0f9;
+    --shadow-color: #e3eef9;
 }
 
 /* Font Face */
@@ -353,6 +353,31 @@ figcaption {
     padding: 0;
     text-align: center;
     font-size: var(--font-size-smaller);
+}
+
+.poster-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.poster-preview {
+    max-width: 275px;
+    height: auto;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform var(--transition-time), box-shadow var(--transition-time);
+}
+
+.poster-preview:hover {
+    transform: scale(1.05);
+    box-shadow: 4.5px 4.5px 9px 2.25px var(--shadow-color);
+}
+
+.poster-caption {
+    font-size: var(--font-size-smaller);
+    margin-top: 5px;
+    text-align: center !important;
 }
 
 /* Responsive Styles */
